@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 4845496010854341764}
   m_Layer: 0
   m_Name: pointCounter_TriggerBox
-  m_TagString: Untagged
+  m_TagString: PointerCounter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

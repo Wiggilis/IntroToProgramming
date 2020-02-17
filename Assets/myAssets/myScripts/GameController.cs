@@ -10,11 +10,10 @@ public class GameController : MonoBehaviour
     public Transform birdSpawnLocation;
     public GameObject playButton;
     public ObstacleSpawner obstacleSpawnerRef;
+    public int points;
+    public TextMeshProUGUI scoreText;
 
     bool isAlive = false;
-
-    // Spawns bird 
-
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +38,7 @@ public class GameController : MonoBehaviour
             SpawnBird();
             obstacleSpawnerRef.enabled = true;
             playButton.SetActive(false);
+            points = 0;
         }
     }
 
@@ -50,5 +50,11 @@ public class GameController : MonoBehaviour
     void SpawnBird()
     {
         Instantiate(birdPrefab,birdSpawnLocation.position, birdSpawnLocation.rotation);
+    }
+
+    public void AddPoints()
+    {
+        points++;
+        print("My Points: " + points);
     }
 }

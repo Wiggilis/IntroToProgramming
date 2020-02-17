@@ -8,11 +8,13 @@ public class BirdController : MonoBehaviour
     public float upForce;
     private bool isJumping = false;
     public bool isAlive = false;
+    private GameObject gameObjectRef;
+    private GameObject gameManagerReference;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManagerReference = GameObject.FindWithTag("GameController");
     }
 
     // Update is called once per frame
@@ -45,10 +47,15 @@ public class BirdController : MonoBehaviour
     {
         Debug.Log("I hit the object " + objectBeingHit.gameObject.name);
         Destroy(gameObject);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("I hit something!");
+        Debug.Log("I hit the object " + collision.gameObject.name);
+        if (collision.gameObject.tag == "PointerCounter")
+        {
+            gameManagerReference.GetComponent<GameController>().AddPoints();
+        }
     }
 }

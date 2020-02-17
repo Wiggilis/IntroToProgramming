@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 742588972}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,6 +566,8 @@ MonoBehaviour:
   birdSpawnLocation: {fileID: 742588971}
   playButton: {fileID: 101743815}
   obstacleSpawnerRef: {fileID: 742588972}
+  points: 0
+  scoreText: {fileID: 0}
 --- !u!4 &742588971
 Transform:
   m_ObjectHideFlags: 0
