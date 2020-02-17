@@ -46,4 +46,9 @@ public class BirdController : MonoBehaviour
         Debug.Log("I hit the object " + objectBeingHit.gameObject.name);
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("I hit something!");
+    }
 }
